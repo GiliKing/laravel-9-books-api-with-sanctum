@@ -40,7 +40,7 @@ You must provide the Body Parameter
 </ol>
 
 
-Response json data
+Response json data <br>
 
 {
     "status": "Request was succesful.",
@@ -84,7 +84,7 @@ You must provide the Body Parameter
     </li>
 </ol>
 
-Response json data
+Response json data <br>
  
 {
     "status": "Request was succesful.",
@@ -118,7 +118,7 @@ You must set the Request Headers
     </li>
 </ol>
 
-Response json data
+Response json data <br>
 {
     "id": "294",
     "attributes": {
@@ -148,7 +148,7 @@ You must set the Request Headers
 </ol>
 
 
-Response json data
+Response json data <br>
 {
     "id": "154",
     "attributes": {
@@ -178,7 +178,7 @@ You must set the Request Headers
     </li>
 </ol>
 
-Response json data
+Response json data <br>
 {
     "id": "174",
     "attributes": {
@@ -241,7 +241,7 @@ You must Provide you Authoriton Bearer Token
     </li>
 </ol>
 
-Response json data
+Response json data <br>
 {
     "id": "2194",
     "attributes": {
@@ -258,9 +258,6 @@ Response json data
         "comment": "Alice thought), and it was not here before,' said Alice,) and round Alice, every now and then, 'we went to school every day--' 'I'VE been to her, 'if we had the door of which was full of the Queen's ears--' the Rabbit angrily. 'Here! Come and help me out of a dance is it?' he said, turning to Alice to herself, 'Why, they're only a mouse that had fluttered down from the sky! Ugh, Serpent!' 'But I'm NOT a serpent, I tell you!' But she waited for some time without hearing anything more: at last."
     }
 }
-
-
-
 
 ## Usage
 
