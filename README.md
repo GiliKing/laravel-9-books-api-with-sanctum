@@ -1,65 +1,292 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel 9 BOOK LISTING API
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This a backend only application that returns json data of book listings
+containing the name of book their authors and the total amount of comment
+associated with the book
 
-## About Laravel
+## EndPionts 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Public Endpoints
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Register Endpoints
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+https://larabooksok.herokuapp.com/api/register
 
-## Learning Laravel
+You must set the Request Headers
+<ol>
+    <li>
+        Accept: application/vnd.api+json
+    </li>
+    <li>
+        Content-Type: application/vnd.api+json
+    </li>
+</ol>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+You must provide the Body Parameter
+<ol>
+    <li>
+        name : Your full name
+    </li>
+    <li>
+        email : Your email address
+    </li>
+    <li>
+        password : Your password
+    </li>
+    <li>
+        password_confirmation : Your password again
+    </li>
+</ol>
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Response json data
 
-### Premium Partners
+{
+    "status": "Request was succesful.",
+    "message": null,
+    "data": {
+        "user": {
+            "id": id,
+            "name": "Your name",
+            "email": "Your",
+            "email_verified_at": null,
+            "created_at": "2022-09-11T01:51:31.000000Z",
+            "updated_at": "2022-09-11T01:51:31.000000Z"
+        },
+        "token": "token generated"
+    }
+}
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+# Login Endpoints
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+https://larabooksok.herokuapp.com/api/lgoin
 
-## Code of Conduct
+You must set the Request Headers
+<ol>
+    <li>
+        Accept: application/vnd.api+json
+    </li>
+    <li>
+        Content-Type: application/vnd.api+json
+    </li>
+</ol>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+You must provide the Body Parameter
+<ol>
+    <li>
+        email : Your email address
+    </li>
+    <li>
+        password : Your password
+    </li>
+</ol>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Response json data
+ 
+{
+    "status": "Request was succesful.",
+    "message": null,
+    "data": {
+        "user": {
+            "id": id,
+            "name": "Your name",
+            "email": "Your",
+            "email_verified_at": null,
+            "created_at": "2022-09-11T01:51:31.000000Z",
+            "updated_at": "2022-09-11T01:51:31.000000Z"
+        },
+        "token": "token generated"
+    }
+}
+
+### Public Endpoints
+##  Books Endpoints 
+#  all Book listings from old new to
+
+https://larabooksok.herokuapp.com/api/books/all
+
+You must set the Request Headers
+<ol>
+    <li>
+        Accept: application/vnd.api+json
+    </li>
+    <li>
+        Content-Type: application/vnd.api+json
+    </li>
+</ol>
+
+Response json data
+{
+    "id": "294",
+    "attributes": {
+        "book_title": "Product Specialist",
+        "author": "Miss Madisyn Keeling",
+        "publication_year": "2010",
+        "uploaded_at": "2022-09-11T10:03:53.000000Z",
+        "updated_at": "2022-09-11T10:03:53.000000Z"
+    },
+    "relationships": {
+        "comment_count": 16
+    }
+}
+
+#  all latest Books
+
+https://larabooksok.herokuapp.com/api/books/latest
+
+You must set the Request Headers
+<ol>
+    <li>
+        Accept: application/vnd.api+json
+    </li>
+    <li>
+        Content-Type: application/vnd.api+json
+    </li>
+</ol>
+
+
+Response json data
+{
+    "id": "154",
+    "attributes": {
+        "book_title": "Nuclear Technician",
+        "author": "Kimberly Howe",
+        "publication_year": "2022",
+        "uploaded_at": "2022-09-11T10:03:41.000000Z",
+        "updated_at": "2022-09-11T10:03:41.000000Z"
+    },
+    "relationships": {
+        "comment_count": 8
+    }
+}
+
+
+#  all oldest Books
+
+https://larabooksok.herokuapp.com/api/books/oldest
+
+You must set the Request Headers
+<ol>
+    <li>
+        Accept: application/vnd.api+json
+    </li>
+    <li>
+        Content-Type: application/vnd.api+json
+    </li>
+</ol>
+
+Response json data
+{
+    "id": "174",
+    "attributes": {
+        "book_title": "Clerk",
+        "author": "Ernestine Wyman",
+        "publication_year": "1972",
+        "uploaded_at": "2022-09-11T10:03:43.000000Z",
+        "updated_at": "2022-09-11T10:03:43.000000Z"
+    },
+    "relationships": {
+        "comment_count": 9
+    }
+}
+
+
+
+### Protected Endpoints
+# Logout Endpoints
+
+https://larabooksok.herokuapp.com/api/logout
+
+You must set the Request Headers
+<ol>
+    <li>
+        Accept: application/vnd.api+json
+    </li>
+    <li>
+        Content-Type: application/vnd.api+json
+    </li>
+</ol>
+
+You must Provide you Authoriton Bearer Token
+<ol>
+    <li>
+        Bearer Token : you authorizes token
+    </li>
+</ol>
+
+
+### Protected Endpoints
+## Book listing Enpoints for Authenticated User
+#  Books Endpoints
+
+https://larabooksok.herokuapp.com/api/books
+
+You must set the Request Headers
+<ol>
+    <li>
+        Accept: application/vnd.api+json
+    </li>
+    <li>
+        Content-Type: application/vnd.api+json
+    </li>
+</ol>
+
+You must Provide you Authoriton Bearer Token
+<ol>
+    <li>
+        Bearer Token : you authorizes token
+    </li>
+</ol>
+
+Response json data
+{
+    "id": "2194",
+    "attributes": {
+        "book_title": "Transportation Worker",
+        "author": "Brayan Ryan",
+        "publication_year": "1991",
+        "created_at": "2022-09-11T10:03:46.000000Z",
+        "updated_at": "2022-09-11T10:03:46.000000Z"
+    },
+    "relationships": {
+        "user": "Code with gili",
+        "email": "chrisogili12@gmail.com",
+        "ipadd": "15203821077",
+        "comment": "Alice thought), and it was not here before,' said Alice,) and round Alice, every now and then, 'we went to school every day--' 'I'VE been to her, 'if we had the door of which was full of the Queen's ears--' the Rabbit angrily. 'Here! Come and help me out of a dance is it?' he said, turning to Alice to herself, 'Why, they're only a mouse that had fluttered down from the sky! Ugh, Serpent!' 'But I'm NOT a serpent, I tell you!' But she waited for some time without hearing anything more: at last."
+    }
+}
+
+
+
+
+## Usage
+
+### Database Setup
+This app uses MySQL. To use something different, open up config/Database.php and change the default driver.
+
+To use MySQL, make sure you install it, setup a database and then add your db credentials(database, username and password) to the .env.example file and rename it to .env
+
+### Migrations
+To create all the nessesary tables and columns, run the following
+```
+php artisan migrate
+```
+
+### Seeding The Database
+To add the dummy listings with a single user, run the following
+```
+php artisan db:seed
+```
+
+### Running Then App
+Upload the files to your document root, Valet folder or run 
+```
+php artisan serve
+```
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# laravel-9-books-api-with-sanctum" 
+The LaraGigs app is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

@@ -8,6 +8,6 @@
 </head>
 <body>
     
-    <h1>Nothing to show visit the document</h1>
+    <h1>Nothing to show visit the documentation</h1>
 </body>
 </html>
