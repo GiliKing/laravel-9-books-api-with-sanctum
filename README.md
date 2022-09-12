@@ -581,9 +581,19 @@ php artisan migrate
 ```
 
 ### Seeding The Database
-To add the dummy listings with a single user, run the following
+To add the dummy comments with a single user, run the following
 ```
 php artisan db:seed
+```
+
+### Testing
+To test all endpoints, run the following
+```
+php artisan test
+
+or
+
+"./vendor/bin/phpunit"
 ```
 
 ### Running Then App
